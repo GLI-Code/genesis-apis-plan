@@ -36,6 +36,7 @@
   .status-fal{background:#EDE9FE;color:#5B21B6}
   .status-post{background:#F1F5F9;color:#475569}
   .status-reemplazada{background:#FCE7F3;color:#9D174D}
+  .status-dup{background:#FFF7ED;color:#9A3412}
   .td-person-cell{min-width:140px}
   .td-sponsor{font-size:10.5px;font-weight:500;color:#8B95A5;margin-bottom:3px;white-space:nowrap}
   .td-person{color:#0B0F1A;font-size:15px;font-weight:700;white-space:nowrap}
@@ -60,7 +61,7 @@
 <div class="page-header">
   <div class="g-badge">G</div>
   <div><h1>Proyecto Génesis — Servicios por Equipo</h1>
-  <p>Genomma Lab Internacional · Deadline: 20 Abril 2026 · Actualizado: 09/04/2026 11:56</p></div>
+  <p>Genomma Lab Internacional · Deadline: 20 Abril 2026 · Actualizado: 09/04/2026 12:17</p></div>
 </div>
 <div class="progress-global">
   <span class="label">Avance general</span>
@@ -70,7 +71,7 @@
 <div class="toolbar">
   <div class="search-box"><span>🔍</span><input type="text" id="search" placeholder="Buscar servicio o responsable…" oninput="filter()"></div>
   <select class="filter-sel" id="fEquipo" onchange="filter()">
-    <option value="">Todos los equipos</option><option value="A">Equipo A</option><option value="B">Equipo B</option><option value="TBD">Sin equipo</option>
+    <option value="">Todos los equipos</option><option value="A">Equipo A</option><option value="B">Equipo B</option><option value="—">Sin equipo</option>
   </select>
   <select class="filter-sel" id="fPrio" onchange="filter()">
     <option value="">Todas las prioridades</option><option value="CRÍTICA">Crítica</option><option value="ALTA">Alta</option><option value="POST">Post-launch</option>
@@ -320,8 +321,8 @@
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-green" style="width:100%"></div></div><span class="avance-pct">100%</span></div></td>
       </tr>
-      <tr data-eq="—" data-prio="CRÍTICA" data-resp="Emmanuel">
-        <td><span class="eq-pill eq-tbd">—</span></td>
+      <tr data-eq="B" data-prio="CRÍTICA" data-resp="Emmanuel">
+        <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">fal.ai — Veo 3.1<br><span class="td-status status-ok">CONTRATADA</span></td>
         <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Emmanuel</div><div class="resp-avance"><div class="resp-bar"><div class="resp-fill bar-blue" style="width:0%"></div></div><span class="resp-pct">0%</span></div></td>
@@ -504,8 +505,8 @@
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
-      <tr data-eq="NA" data-prio="ALTA" data-resp="—">
-        <td><span class="eq-pill eq-tbd">NA</span></td>
+      <tr data-eq="—" data-prio="ALTA" data-resp="—">
+        <td><span class="eq-pill eq-tbd">—</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Pinecone Vector DB<br><span class="td-status status-pend">PENDIENTE</span></td>
         <td class="td-person-cell"><div class="td-person">—</div></td>
@@ -536,8 +537,8 @@
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
-      <tr data-eq="TBD" data-prio="ALTA" data-resp="—">
-        <td><span class="eq-pill eq-tbd">TBD</span></td>
+      <tr data-eq="—" data-prio="ALTA" data-resp="—">
+        <td><span class="eq-pill eq-tbd">—</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Google Vision API<br><span class="td-status status-pend">PENDIENTE</span></td>
         <td class="td-person-cell"><div class="td-person">—</div></td>
@@ -739,7 +740,7 @@
       <tr data-eq="A" data-prio="ALTA" data-resp="David A.">
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">Upfluence API<br><span class="td-status status-pend">SERVICIO DUPLICADO</span></td>
+        <td class="td-nombre">Upfluence API<br><span class="td-status status-dup">SERVICIO DUPLICADO</span></td>
         <td class="td-person-cell"><div class="td-sponsor">Daniela Blanco</div><div class="td-person">David A.</div><div class="resp-avance"><div class="resp-bar"><div class="resp-fill bar-blue" style="width:22%"></div></div><span class="resp-pct">22%</span></div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
@@ -763,7 +764,7 @@
       <tr data-eq="A" data-prio="ALTA" data-resp="David A.">
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">Supermetrics / Windsor.ai<br><span class="td-status status-pend">PENDIENTE</span></td>
+        <td class="td-nombre">Supermetrics / Windsor.ai<br><span class="td-status status-ok">CONTRATADA</span></td>
         <td class="td-person-cell"><div class="td-person">David A.</div><div class="resp-avance"><div class="resp-bar"><div class="resp-fill bar-blue" style="width:22%"></div></div><span class="resp-pct">22%</span></div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
@@ -771,7 +772,7 @@
       <tr data-eq="A" data-prio="ALTA" data-resp="Nancy O.">
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">Phyllo API<br><span class="td-status status-pend">SERVICIO DUPLICADO</span></td>
+        <td class="td-nombre">Phyllo API<br><span class="td-status status-dup">SERVICIO DUPLICADO</span></td>
         <td class="td-person-cell"><div class="td-person">Nancy O.</div><div class="resp-avance"><div class="resp-bar"><div class="resp-fill bar-amber" style="width:51%"></div></div><span class="resp-pct">51%</span></div></td>
         <td class="td-mono">5537261662</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-green" style="width:100%"></div></div><span class="avance-pct">100%</span></div></td>
@@ -779,7 +780,7 @@
       <tr data-eq="A" data-prio="ALTA" data-resp="Angel T.">
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">DataForSEO API<br><span class="td-status status-ok">CONTRATADA</span></td>
+        <td class="td-nombre">DataForSEO Keywords Data API<br><span class="td-status status-ok">CONTRATADA</span></td>
         <td class="td-person-cell"><div class="td-person">Angel T.</div><div class="resp-avance"><div class="resp-bar"><div class="resp-fill bar-blue" style="width:36%"></div></div><span class="resp-pct">36%</span></div></td>
         <td class="td-mono">5543879711</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
@@ -787,14 +788,14 @@
       <tr data-eq="A" data-prio="ALTA" data-resp="Angel T.">
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">DataForSEO API<br><span class="td-status status-ok">CONTRATADA</span></td>
+        <td class="td-nombre">DataForSEO Content Analysis API<br><span class="td-status status-ok">CONTRATADA</span></td>
         <td class="td-person-cell"><div class="td-person">Angel T.</div><div class="resp-avance"><div class="resp-bar"><div class="resp-fill bar-blue" style="width:36%"></div></div><span class="resp-pct">36%</span></div></td>
         <td class="td-mono">5543879711</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
-      <tr data-eq="B" data-prio="Alta" data-resp="Miguel">
+      <tr data-eq="B" data-prio="ALTA" data-resp="Miguel">
         <td><span class="eq-pill eq-b">B</span></td>
-        <td><span class="prio-badge prio-post">Alta</span></td>
+        <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Vercel<br><span class="td-status status-ok">CONTRATADA</span></td>
         <td class="td-person-cell"><div class="td-person">Miguel</div><div class="resp-avance"><div class="resp-bar"><div class="resp-fill bar-blue" style="width:29%"></div></div><span class="resp-pct">29%</span></div></td>
         <td class="td-mono">5545250753</td>
