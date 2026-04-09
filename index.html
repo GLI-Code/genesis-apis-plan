@@ -28,7 +28,9 @@
   .prio-badge{display:inline-block;padding:3px 8px;border-radius:4px;font-size:10.5px;font-weight:700;white-space:nowrap}
   .prio-critica{background:#FEE2E2;color:#991B1B}.prio-alta{background:#FEF3C7;color:#92400E}.prio-post{background:#F1F5F9;color:#64748B}
   .td-nombre{font-weight:600;color:#0B0F1A;min-width:180px;max-width:280px}
-  .td-person{color:#0B0F1A;min-width:120px;font-size:15px;font-weight:700}
+  .td-person-cell{min-width:140px}
+  .td-sponsor{font-size:10.5px;font-weight:500;color:#8B95A5;margin-bottom:3px;white-space:nowrap}
+  .td-person{color:#0B0F1A;font-size:15px;font-weight:700;white-space:nowrap}
   .td-mono{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#4F46E5;white-space:nowrap}
   .td-avance{min-width:140px}
   .avance-wrap{display:flex;align-items:center;gap:8px}
@@ -41,7 +43,7 @@
 <div class="page-header">
   <div class="g-badge">G</div>
   <div><h1>Proyecto Génesis — Servicios por Equipo</h1>
-  <p>Genomma Lab Internacional · Deadline: 20 Abril 2026 · Actualizado: 08/04/2026 21:08</p></div>
+  <p>Genomma Lab Internacional · Deadline: 20 Abril 2026 · Actualizado: 08/04/2026 21:41</p></div>
 </div>
 <div class="toolbar">
   <div class="search-box"><span>🔍</span><input type="text" id="search" placeholder="Buscar servicio o responsable…" oninput="filter()"></div>
@@ -70,13 +72,13 @@
   <div class="counter" id="counter">86 servicios</div>
 </div>
 <div class="table-wrap"><table>
-  <thead><tr><th>Equipo</th><th>Prioridad</th><th>Servicio</th><th>Responsable</th><th>📞 Celular</th><th>Avance</th></tr></thead>
+  <thead><tr><th>Equipo</th><th>Prioridad</th><th>Servicio</th><th>Sponsor / Responsable</th><th>📞 Celular</th><th>Avance</th></tr></thead>
   <tbody id="tbody">
       <tr data-eq="A" data-prio="CRÍTICA" data-resp="David A.">
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">Anthropic Claude API<br><span class="td-status status-ok">CONTRATADA</span></td>
-        <td class="td-person">David A.</td>
+        <td class="td-person-cell"><div class="td-person">David A.</div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -84,7 +86,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">Snowflake<br><span class="td-status status-ok">CONTRATADA</span></td>
-        <td class="td-person">David A.</td>
+        <td class="td-person-cell"><div class="td-person">David A.</div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -92,7 +94,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">Knobloch<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Areli G.</td>
+        <td class="td-person-cell"><div class="td-person">Areli G.</div></td>
         <td class="td-mono">5510492534</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:13%"></div></div><span class="avance-pct">13%</span></div></td>
       </tr>
@@ -100,7 +102,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">Nielsen Data<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Areli G.</td>
+        <td class="td-person-cell"><div class="td-person">Areli G.</div></td>
         <td class="td-mono">5510492534</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-amber" style="width:67%"></div></div><span class="avance-pct">67%</span></div></td>
       </tr>
@@ -108,7 +110,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Kantar Worldpanel<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">David A.</td>
+        <td class="td-person-cell"><div class="td-person">David A.</div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -116,7 +118,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">HR Media (Ratings TV)<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan J.</td>
+        <td class="td-person-cell"><div class="td-person">Juan J.</div></td>
         <td class="td-mono">5624172137</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -124,7 +126,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">Retailers APIs (Walmart)<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Angel T.</td>
+        <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -132,7 +134,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">Retailers APIs (FEMSA/OXXO)<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Angel T.</td>
+        <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -140,7 +142,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Retailers APIs (Chedraui)<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Angel T.</td>
+        <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -148,7 +150,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Retailers APIs (Soriana)<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Angel T.</td>
+        <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -156,7 +158,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Google Trends API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Emmanuel</td>
+        <td class="td-person-cell"><div class="td-person">Emmanuel</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -164,7 +166,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Google Analytics API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Emmanuel</td>
+        <td class="td-person-cell"><div class="td-person">Emmanuel</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -172,23 +174,23 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">SAP Bridge (MM)<br><span class="td-status status-cfg">CONFIGURAR</span></td>
-        <td class="td-person">Talia</td>
+        <td class="td-person-cell"><div class="td-person">Talia</div></td>
         <td class="td-mono">552095-1719</td>
-        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
+        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-amber" style="width:80%"></div></div><span class="avance-pct">80%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="CRÍTICA" data-resp="Talia">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">SAP Bridge (SD)<br><span class="td-status status-cfg">CONFIGURAR</span></td>
-        <td class="td-person">Talia</td>
+        <td class="td-person-cell"><div class="td-person">Talia</div></td>
         <td class="td-mono">552095-1719</td>
-        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
+        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-green" style="width:100%"></div></div><span class="avance-pct">100%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="CRÍTICA" data-resp="Talia">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">SAP Bridge (FI)<br><span class="td-status status-cfg">CONFIGURAR</span></td>
-        <td class="td-person">Talia</td>
+        <td class="td-person-cell"><div class="td-person">Talia</div></td>
         <td class="td-mono">552095-1719</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -196,7 +198,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">SAP Bridge (CO)<br><span class="td-status status-cfg">CONFIGURAR</span></td>
-        <td class="td-person">Talia</td>
+        <td class="td-person-cell"><div class="td-person">Talia</div></td>
         <td class="td-mono">552095-1719</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -204,7 +206,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">SAP Bridge (HR)<br><span class="td-status status-cfg">CONFIGURAR</span></td>
-        <td class="td-person">Talia</td>
+        <td class="td-person-cell"><div class="td-person">Talia</div></td>
         <td class="td-mono">552095-1719</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -212,7 +214,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">SAP Bridge (PP)<br><span class="td-status status-cfg">CONFIGURAR</span></td>
-        <td class="td-person">Talia</td>
+        <td class="td-person-cell"><div class="td-person">Talia</div></td>
         <td class="td-mono">552095-1719</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -220,7 +222,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">SAP Bridge (TR)<br><span class="td-status status-cfg">CONFIGURAR</span></td>
-        <td class="td-person">Talia</td>
+        <td class="td-person-cell"><div class="td-person">Talia</div></td>
         <td class="td-mono">552095-1719</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -228,119 +230,119 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">SAP Bridge (PA)<br><span class="td-status status-cfg">CONFIGURAR</span></td>
-        <td class="td-person">Talia</td>
+        <td class="td-person-cell"><div class="td-person">Talia</div></td>
         <td class="td-mono">552095-1719</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="CRÍTICA" data-resp="Roberto">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
-        <td class="td-nombre">fal.ai Gateway<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Roberto</td>
+        <td class="td-nombre">fal.ai Gateway<br><span class="td-status status-ok">CONTRATADA</span></td>
+        <td class="td-person-cell"><div class="td-person">Roberto</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="CRÍTICA" data-resp="Roberto">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
-        <td class="td-nombre">— FLUX.2 Pro (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Roberto</td>
+        <td class="td-nombre">fal.ai — FLUX.2 Pro<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Roberto</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="CRÍTICA" data-resp="Roberto">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
-        <td class="td-nombre">— Midjourney v7 (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Roberto</td>
+        <td class="td-nombre">fal.ai — Midjourney v7<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Roberto</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="ALTA" data-resp="Roberto">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">— Ideogram V3 (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Roberto</td>
+        <td class="td-nombre">fal.ai — Ideogram V3<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Roberto</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="ALTA" data-resp="Roberto">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">— Leonardo AI (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Roberto</td>
+        <td class="td-nombre">fal.ai — Leonardo AI<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Roberto</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="ALTA" data-resp="Juan Carlos">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">— Adobe Firefly (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Juan Carlos</td>
+        <td class="td-nombre">fal.ai — Adobe Firefly<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Juan Carlos</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="ALTA" data-resp="Roberto">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">— Recraft (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Roberto</td>
+        <td class="td-nombre">fal.ai — Recraft<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Roberto</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="POST" data-resp="Roberto">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-post">POST</span></td>
-        <td class="td-nombre">— Nano Banana 2 (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Roberto</td>
+        <td class="td-nombre">fal.ai — Nano Banana 2<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Roberto</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="CRÍTICA" data-resp="Emmanuel">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
-        <td class="td-nombre">— Veo 3.1 (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Emmanuel</td>
+        <td class="td-nombre">fal.ai — Veo 3.1<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Emmanuel</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="CRÍTICA" data-resp="Juan Carlos">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
-        <td class="td-nombre">— Kling 3.0 (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Juan Carlos</td>
+        <td class="td-nombre">fal.ai — Kling 3.0<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Juan Carlos</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="ALTA" data-resp="Miguel">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">— Seedance 2.0 (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Miguel</td>
+        <td class="td-nombre">fal.ai — Seedance 2.0<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Miguel</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="ALTA" data-resp="Madali">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">— Runway Gen-4.5 (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Madali</td>
+        <td class="td-nombre">fal.ai — Runway Gen-4.5<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Madali</div></td>
         <td class="td-mono">5545954103</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="ALTA" data-resp="Madali">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">— HeyGen (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Madali</td>
+        <td class="td-nombre">fal.ai — HeyGen<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Madali</div></td>
         <td class="td-mono">5545954103</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="ALTA" data-resp="Madali">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">— Creatify (vía fal.ai)<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
-        <td class="td-person">Madali</td>
+        <td class="td-nombre">fal.ai — Creatify<br><span class="td-status status-fal">VÍA FAL.AI</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Madali</div></td>
         <td class="td-mono">5545954103</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -348,7 +350,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">ElevenLabs<br><span class="td-status status-ok">CONTRATADA</span></td>
-        <td class="td-person">Madali</td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Madali</div></td>
         <td class="td-mono">5545954103</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -356,7 +358,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Suno AI<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Miguel</td>
+        <td class="td-person-cell"><div class="td-sponsor">Oscar Jiménez</div><div class="td-person">Miguel</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -364,7 +366,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Canva API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan Carlos</td>
+        <td class="td-person-cell"><div class="td-person">Juan Carlos</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -372,7 +374,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">Meta Graph API v19<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan J.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Juan J.</div></td>
         <td class="td-mono">5624172137</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -380,7 +382,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">TikTok Content Posting API v2<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan J.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Juan J.</div></td>
         <td class="td-mono">5624172137</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -388,15 +390,15 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">Google Ads API v16<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan J.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Juan J.</div></td>
         <td class="td-mono">5624172137</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
       <tr data-eq="A" data-prio="ALTA" data-resp="Nancy O.">
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">Amazon Seller/MWS API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Nancy O.</td>
+        <td class="td-nombre">Amazon Seller / MWS API<br><span class="td-status status-pend">PENDIENTE</span></td>
+        <td class="td-person-cell"><div class="td-sponsor">Paola Bermúdez</div><div class="td-person">Nancy O.</div></td>
         <td class="td-mono">5537261662</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:33%"></div></div><span class="avance-pct">33%</span></div></td>
       </tr>
@@ -404,7 +406,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">MercadoLibre API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Nancy O.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Paola Bermúdez</div><div class="td-person">Nancy O.</div></td>
         <td class="td-mono">5537261662</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:33%"></div></div><span class="avance-pct">33%</span></div></td>
       </tr>
@@ -412,7 +414,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Netlify API<br><span class="td-status status-ok">CONTRATADA</span></td>
-        <td class="td-person">Nancy O.</td>
+        <td class="td-person-cell"><div class="td-person">Nancy O.</div></td>
         <td class="td-mono">5537261662</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:40%"></div></div><span class="avance-pct">40%</span></div></td>
       </tr>
@@ -420,7 +422,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">PubMed API (E-utilities)<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Nancy O.</td>
+        <td class="td-person-cell"><div class="td-person">Nancy O.</div></td>
         <td class="td-mono">5537261662</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -428,7 +430,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">Google Patents API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Nancy O.</td>
+        <td class="td-person-cell"><div class="td-person">Nancy O.</div></td>
         <td class="td-mono">5537261662</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -436,7 +438,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">ICIS Chemical Indices<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Nancy O.</td>
+        <td class="td-person-cell"><div class="td-person">Nancy O.</div></td>
         <td class="td-mono">5537261662</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -444,7 +446,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Mintel API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">David A.</td>
+        <td class="td-person-cell"><div class="td-person">David A.</div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -452,7 +454,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">CosmeticsDesign API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Areli G.</td>
+        <td class="td-person-cell"><div class="td-person">Areli G.</div></td>
         <td class="td-mono">5510492534</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -460,7 +462,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">@cosme (scraping)<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Angel T.</td>
+        <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -468,7 +470,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Olive Young (scraping)<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Angel T.</td>
+        <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -476,7 +478,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">AWS S3<br><span class="td-status status-ok">CONTRATADA</span></td>
-        <td class="td-person">Alejandro</td>
+        <td class="td-person-cell"><div class="td-person">Alejandro</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -484,7 +486,7 @@
         <td><span class="eq-pill eq-tbd">NA</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Pinecone Vector DB<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">—</td>
+        <td class="td-person-cell"><div class="td-person">—</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -492,7 +494,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">AWS/Azure (Hosting)<br><span class="td-status status-ok">CONTRATADA</span></td>
-        <td class="td-person">Alejandro</td>
+        <td class="td-person-cell"><div class="td-person">Alejandro</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -500,7 +502,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">PostgreSQL (RDS/Azure DB)<br><span class="td-status status-ok">CONTRATADA</span></td>
-        <td class="td-person">Alejandro</td>
+        <td class="td-person-cell"><div class="td-person">Alejandro</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -508,7 +510,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">WhatsApp Business API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan Carlos</td>
+        <td class="td-person-cell"><div class="td-person">Juan Carlos</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -516,7 +518,7 @@
         <td><span class="eq-pill eq-tbd">TBD</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Google Vision API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">—</td>
+        <td class="td-person-cell"><div class="td-person">—</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -524,7 +526,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-post">POST</span></td>
         <td class="td-nombre">Product Hunt API<br><span class="td-status status-post">POST-LAUNCH</span></td>
-        <td class="td-person">Juan Carlos</td>
+        <td class="td-person-cell"><div class="td-person">Juan Carlos</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -532,7 +534,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-post">POST</span></td>
         <td class="td-nombre">Reddit API (PRAW)<br><span class="td-status status-post">POST-LAUNCH</span></td>
-        <td class="td-person">Juan Carlos</td>
+        <td class="td-person-cell"><div class="td-person">Juan Carlos</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -540,7 +542,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-post">POST</span></td>
         <td class="td-nombre">X (Twitter) API<br><span class="td-status status-post">POST-LAUNCH</span></td>
-        <td class="td-person">—</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">—</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -548,7 +550,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Anthropic Billing API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Alejandro</td>
+        <td class="td-person-cell"><div class="td-person">Alejandro</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -556,7 +558,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Alibaba API / Scraping<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Angel T.</td>
+        <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -564,7 +566,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Made-in-China<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Areli G.</td>
+        <td class="td-person-cell"><div class="td-person">Areli G.</div></td>
         <td class="td-mono">5510492534</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -572,7 +574,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">IndiaMART<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Areli G.</td>
+        <td class="td-person-cell"><div class="td-person">Areli G.</div></td>
         <td class="td-mono">5510492534</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -580,7 +582,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">PubChem<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan J.</td>
+        <td class="td-person-cell"><div class="td-person">Juan J.</div></td>
         <td class="td-mono">5624172137</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -588,7 +590,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">APIs Bancarias<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Alejandro</td>
+        <td class="td-person-cell"><div class="td-person">Alejandro</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -596,7 +598,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-post">POST</span></td>
         <td class="td-nombre">Qlik Sense API<br><span class="td-status status-post">POST-LAUNCH</span></td>
-        <td class="td-person">Nancy O.</td>
+        <td class="td-person-cell"><div class="td-person">Nancy O.</div></td>
         <td class="td-mono">5537261662</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-green" style="width:100%"></div></div><span class="avance-pct">100%</span></div></td>
       </tr>
@@ -604,7 +606,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">X API v2 (Publishing)<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">—</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">—</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -612,7 +614,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Pinterest API v5<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan Carlos</td>
+        <td class="td-person-cell"><div class="td-sponsor">Daniela Blanco</div><div class="td-person">Juan Carlos</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -620,7 +622,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">YouTube Data API v3<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Emmanuel</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Emmanuel</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -628,7 +630,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Vimeo API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Miguel</td>
+        <td class="td-person-cell"><div class="td-person">Miguel</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -636,7 +638,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Meta Ad Library API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan J.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Juan J.</div></td>
         <td class="td-mono">5624172137</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -644,7 +646,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">TikTok Marketing API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan J.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Daniela Blanco</div><div class="td-person">Juan J.</div></td>
         <td class="td-mono">5624172137</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -652,7 +654,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">TikTok Shop API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">David A.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Daniela Blanco</div><div class="td-person">David A.</div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -660,7 +662,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Spotify Ad Studio API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan J.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Juan J.</div></td>
         <td class="td-mono">5624172137</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -668,7 +670,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">X Ads API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Areli G.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Areli G.</div></td>
         <td class="td-mono">5510492534</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -676,7 +678,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Google Search Console API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Areli G.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Areli G.</div></td>
         <td class="td-mono">5510492534</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -684,7 +686,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Semrush API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Areli G.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Areli G.</div></td>
         <td class="td-mono">5510492534</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -692,7 +694,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Meta Graph (Influencers)<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan J.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Juan J.</div></td>
         <td class="td-mono">5624172137</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -700,7 +702,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">TikTok Content Discovery API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">David A.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Daniela Blanco</div><div class="td-person">David A.</div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -708,7 +710,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Meltwater API<br><span class="td-status status-ok">CONTRATADA</span></td>
-        <td class="td-person">David A.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Daniela Blanco</div><div class="td-person">David A.</div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -716,7 +718,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Upfluence API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">David A.</td>
+        <td class="td-person-cell"><div class="td-sponsor">Daniela Blanco</div><div class="td-person">David A.</div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -724,7 +726,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Figma REST API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan Carlos</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Juan Carlos</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -732,7 +734,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Freepik API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Juan Carlos</td>
+        <td class="td-person-cell"><div class="td-sponsor">Alan Macín</div><div class="td-person">Juan Carlos</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -740,7 +742,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Supermetrics / Windsor.ai<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">David A.</td>
+        <td class="td-person-cell"><div class="td-person">David A.</div></td>
         <td class="td-mono">5548889647</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
@@ -748,7 +750,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Phyllo API<br><span class="td-status status-ok">REEMPLAZADA</span></td>
-        <td class="td-person">Nancy O.</td>
+        <td class="td-person-cell"><div class="td-person">Nancy O.</div></td>
         <td class="td-mono">5537261662</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-green" style="width:100%"></div></div><span class="avance-pct">100%</span></div></td>
       </tr>
@@ -756,7 +758,7 @@
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">DataForSEO API<br><span class="td-status status-pend">PENDIENTE</span></td>
-        <td class="td-person">Angel T.</td>
+        <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
       </tr>
