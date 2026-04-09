@@ -34,7 +34,7 @@
   .prio-alta    { background: #FEF3C7; color: #92400E; }
   .prio-post    { background: #F1F5F9; color: #64748B; }
   .td-nombre { font-weight: 600; color: #0B0F1A; min-width: 180px; max-width: 280px; }
-  .td-person { color: #0B0F1A; min-width: 110px; font-size: 15px; font-weight: 700; }
+  .td-person { color: #0B0F1A; min-width: 120px; font-size: 15px; font-weight: 700; }
   .td-mono   { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #4F46E5; white-space: nowrap; }
   .td-avance { min-width: 140px; }
   .avance-wrap { display: flex; align-items: center; gap: 8px; }
@@ -48,6 +48,7 @@
 </style>
 </head>
 <body>
+
 <div class="page-header">
   <div class="g-badge">G</div>
   <div>
@@ -55,6 +56,7 @@
     <p>Genomma Lab Internacional · Deadline de contratación: 20 Abril 2026</p>
   </div>
 </div>
+
 <div class="toolbar">
   <div class="search-box">
     <span>🔍</span>
@@ -74,15 +76,23 @@
   </select>
   <select class="filter-sel" id="fResp" onchange="filter()">
     <option value="">Todos los responsables</option>
-    <option value="David A.">David A.</option>
-    <option value="Areli G.">Areli G.</option>
-    <option value="Juan J.">Juan J.</option>
+    <option value="Alejandro">Alejandro</option>
     <option value="Angel T.">Angel T.</option>
+    <option value="Areli G.">Areli G.</option>
+    <option value="David A.">David A.</option>
+    <option value="Emmanuel">Emmanuel</option>
+    <option value="Juan Carlos">Juan Carlos</option>
+    <option value="Juan J.">Juan J.</option>
+    <option value="Madali">Madali</option>
+    <option value="Miguel">Miguel</option>
     <option value="Nancy O.">Nancy O.</option>
+    <option value="Roberto">Roberto</option>
+    <option value="Talia">Talia</option>
     <option value="—">Sin asignar</option>
   </select>
   <div class="counter" id="counter">86 servicios</div>
 </div>
+
 <div class="table-wrap">
   <table>
     <thead>
@@ -96,7 +106,6 @@
       </tr>
     </thead>
     <tbody id="tbody">
-
       <tr>
         <td><span class="eq-pill eq-a">A</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
@@ -231,7 +240,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Google Trends API</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Emmanuel</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -244,7 +253,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Google Analytics API</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Emmanuel</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -257,8 +266,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">SAP Bridge (MM)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Talia</td>
+        <td class="td-mono">552095-1719</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -270,8 +279,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">SAP Bridge (SD)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Talia</td>
+        <td class="td-mono">552095-1719</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -283,8 +292,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">SAP Bridge (FI)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Talia</td>
+        <td class="td-mono">552095-1719</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -296,8 +305,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">SAP Bridge (CO)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Talia</td>
+        <td class="td-mono">552095-1719</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -309,8 +318,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">SAP Bridge (HR)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Talia</td>
+        <td class="td-mono">552095-1719</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -322,8 +331,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">SAP Bridge (PP)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Talia</td>
+        <td class="td-mono">552095-1719</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -335,8 +344,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">SAP Bridge (TR)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Talia</td>
+        <td class="td-mono">552095-1719</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -348,8 +357,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">SAP Bridge (PA)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Talia</td>
+        <td class="td-mono">552095-1719</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -361,7 +370,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">fal.ai Gateway</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Roberto</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -374,7 +383,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">— FLUX.2 Pro (vía fal.ai)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Roberto</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -387,7 +396,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">— Midjourney v7 (vía fal.ai)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Roberto</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -400,7 +409,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">— Ideogram V3 (vía fal.ai)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Roberto</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -413,7 +422,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">— Leonardo AI (vía fal.ai)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Roberto</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -426,7 +435,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">— Adobe Firefly (vía fal.ai)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Juan Carlos</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -439,7 +448,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">— Recraft (vía fal.ai)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Roberto</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -452,7 +461,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-post">POST</span></td>
         <td class="td-nombre">— Nano Banana 2 (vía fal.ai)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Roberto</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -465,7 +474,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">— Veo 3.1 (vía fal.ai)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Emmanuel</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -478,7 +487,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">— Kling 3.0 (vía fal.ai)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Juan Carlos</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -491,7 +500,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">— Seedance 2.0 (vía fal.ai)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Miguel</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -504,8 +513,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">— Runway Gen-4.5 (vía fal.ai)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Madali</td>
+        <td class="td-mono">5545954103</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -517,8 +526,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">— HeyGen (vía fal.ai)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Madali</td>
+        <td class="td-mono">5545954103</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -530,8 +539,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">— Creatify (vía fal.ai)</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Madali</td>
+        <td class="td-mono">5545954103</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -543,8 +552,8 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">ElevenLabs</td>
-        <td class="td-person">—</td>
-        <td class="td-mono">—</td>
+        <td class="td-person">Madali</td>
+        <td class="td-mono">5545954103</td>
         <td class="td-avance">
           <div class="avance-wrap">
             <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
@@ -556,7 +565,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Suno AI</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Miguel</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -569,7 +578,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Canva API</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Juan Carlos</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -751,7 +760,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">AWS S3</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Alejandro</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -761,7 +770,7 @@
         </td>
       </tr>
       <tr>
-        <td><span class="eq-pill eq-tbd">—</span></td>
+        <td><span class="eq-pill eq-tbd">NA</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Pinecone Vector DB</td>
         <td class="td-person">—</td>
@@ -777,7 +786,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">AWS/Azure (Hosting)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Alejandro</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -790,7 +799,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">PostgreSQL (RDS/Azure DB)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Alejandro</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -803,7 +812,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">WhatsApp Business API</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Juan Carlos</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -829,7 +838,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-post">POST</span></td>
         <td class="td-nombre">Product Hunt API</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Juan Carlos</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -842,7 +851,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-post">POST</span></td>
         <td class="td-nombre">Reddit API (PRAW)</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Juan Carlos</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -868,7 +877,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Anthropic Billing API</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Alejandro</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -933,7 +942,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">APIs Bancarias</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Alejandro</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -950,8 +959,8 @@
         <td class="td-mono">5537261662</td>
         <td class="td-avance">
           <div class="avance-wrap">
-            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
-            <span class="avance-pct">0%</span>
+            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:1%"></div></div>
+            <span class="avance-pct">1%</span>
           </div>
         </td>
       </tr>
@@ -972,7 +981,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Pinterest API v5</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Juan Carlos</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -985,7 +994,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-critica">CRÍTICA</span></td>
         <td class="td-nombre">YouTube Data API v3</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Emmanuel</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -998,7 +1007,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Vimeo API</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Miguel</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -1154,7 +1163,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Figma REST API</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Juan Carlos</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -1167,7 +1176,7 @@
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
         <td class="td-nombre">Freepik API</td>
-        <td class="td-person">—</td>
+        <td class="td-person">Juan Carlos</td>
         <td class="td-mono">—</td>
         <td class="td-avance">
           <div class="avance-wrap">
@@ -1218,7 +1227,9 @@
     </tbody>
   </table>
 </div>
+
 <div class="page-footer">Génesis Design System v1.0 · Genomma Lab Internacional · 2026</div>
+
 <script>
 function filter() {
   const q  = document.getElementById('search').value.toLowerCase();
@@ -1233,7 +1244,7 @@ function filter() {
     const resp   = cells[3]?.textContent.trim() || '';
     const equipo = cells[0]?.textContent.trim();
     const prio   = cells[1]?.textContent.trim();
-    const match =
+    const match  =
       (!q  || nombre.includes(q) || resp.toLowerCase().includes(q)) &&
       (!eq || equipo === eq) &&
       (!pr || prio === pr) &&
