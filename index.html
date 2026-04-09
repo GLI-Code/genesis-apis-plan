@@ -51,7 +51,7 @@
 <div class="page-header">
   <div class="g-badge">G</div>
   <div><h1>Proyecto Génesis — Servicios por Equipo</h1>
-  <p>Genomma Lab Internacional · Deadline: 20 Abril 2026 · Actualizado: 08/04/2026 21:47</p></div>
+  <p>Genomma Lab Internacional · Deadline: 20 Abril 2026 · Actualizado: 08/04/2026 22:02</p></div>
 </div>
 <div class="toolbar">
   <div class="search-box"><span>🔍</span><input type="text" id="search" placeholder="Buscar servicio o responsable…" oninput="filter()"></div>
@@ -136,7 +136,7 @@
         <td class="td-nombre">Retailers APIs (Walmart)<br><span class="td-status status-pend">PENDIENTE</span></td>
         <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
-        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
+        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-green" style="width:100%"></div></div><span class="avance-pct">100%</span></div></td>
       </tr>
       <tr data-eq="A" data-prio="CRÍTICA" data-resp="Angel T.">
         <td><span class="eq-pill eq-a">A</span></td>
@@ -144,7 +144,7 @@
         <td class="td-nombre">Retailers APIs (FEMSA/OXXO)<br><span class="td-status status-pend">PENDIENTE</span></td>
         <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
-        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
+        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-green" style="width:100%"></div></div><span class="avance-pct">100%</span></div></td>
       </tr>
       <tr data-eq="A" data-prio="ALTA" data-resp="Angel T.">
         <td><span class="eq-pill eq-a">A</span></td>
@@ -152,7 +152,7 @@
         <td class="td-nombre">Retailers APIs (Chedraui)<br><span class="td-status status-pend">PENDIENTE</span></td>
         <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
-        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
+        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-green" style="width:100%"></div></div><span class="avance-pct">100%</span></div></td>
       </tr>
       <tr data-eq="A" data-prio="ALTA" data-resp="Angel T.">
         <td><span class="eq-pill eq-a">A</span></td>
@@ -160,7 +160,7 @@
         <td class="td-nombre">Retailers APIs (Soriana)<br><span class="td-status status-pend">PENDIENTE</span></td>
         <td class="td-person-cell"><div class="td-person">Angel T.</div></td>
         <td class="td-mono">5543879711</td>
-        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
+        <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-green" style="width:100%"></div></div><span class="avance-pct">100%</span></div></td>
       </tr>
       <tr data-eq="B" data-prio="ALTA" data-resp="Emmanuel">
         <td><span class="eq-pill eq-b">B</span></td>
@@ -637,7 +637,7 @@
       <tr data-eq="B" data-prio="ALTA" data-resp="Miguel">
         <td><span class="eq-pill eq-b">B</span></td>
         <td><span class="prio-badge prio-alta">ALTA</span></td>
-        <td class="td-nombre">Vimeo API<br><span class="td-status status-pend">PENDIENTE</span></td>
+        <td class="td-nombre">Vimeo API<br><span class="td-status status-ok">CONTRATADA</span></td>
         <td class="td-person-cell"><div class="td-person">Miguel</div></td>
         <td class="td-mono">—</td>
         <td class="td-avance"><div class="avance-wrap"><div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div><span class="avance-pct">0%</span></div></td>
@@ -780,7 +780,7 @@ function filter(){
   document.querySelectorAll('#tbody tr').forEach(tr=>{
     const c=tr.querySelectorAll('td');
     const match=(!q||c[2]?.textContent.toLowerCase().includes(q)||c[3]?.textContent.toLowerCase().includes(q))&&
-      (!eq||c[0]?.textContent.trim()===eq)&&(!pr||c[1]?.textContent.trim()===pr)&&(!re||c[3]?.textContent.trim()===re);
+      (!eq||tr.dataset.eq===eq)&&(!pr||tr.dataset.prio===pr)&&(!re||tr.dataset.resp===re);
     tr.classList.toggle('hidden',!match);
   });
   document.getElementById('counter').textContent=document.querySelectorAll('#tbody tr:not(.hidden)').length+' servicios';
