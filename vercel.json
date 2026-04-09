@@ -1,10 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "*.html", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/tabla-equipos", "dest": "/tabla-equipos.html" },
-    { "src": "/", "dest": "/index.html" }
-  ]
+  "cleanUrls": true,
+  "trailingSlash": false
 }
