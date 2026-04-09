@@ -39,7 +39,7 @@
   .td-avance { min-width: 140px; }
   .avance-wrap { display: flex; align-items: center; gap: 8px; }
   .avance-bar  { flex: 1; height: 6px; background: #E2E8F0; border-radius: 99px; overflow: hidden; }
-  .avance-fill { height: 100%; border-radius: 99px; transition: width .3s; }
+  .avance-fill { height: 100%; border-radius: 99px; }
   .bar-blue  { background: #4F46E5; }
   .bar-amber { background: #F59E0B; }
   .bar-green { background: #10B981; }
@@ -48,7 +48,6 @@
 </style>
 </head>
 <body>
-
 <div class="page-header">
   <div class="g-badge">G</div>
   <div>
@@ -56,7 +55,6 @@
     <p>Genomma Lab Internacional · Deadline de contratación: 20 Abril 2026</p>
   </div>
 </div>
-
 <div class="toolbar">
   <div class="search-box">
     <span>🔍</span>
@@ -92,17 +90,12 @@
   </select>
   <div class="counter" id="counter">86 servicios</div>
 </div>
-
 <div class="table-wrap">
   <table>
     <thead>
       <tr>
-        <th>Equipo</th>
-        <th>Prioridad</th>
-        <th>Servicio</th>
-        <th>Responsable</th>
-        <th>📞 Celular</th>
-        <th>Avance</th>
+        <th>Equipo</th><th>Prioridad</th><th>Servicio</th>
+        <th>Responsable</th><th>📞 Celular</th><th>Avance</th>
       </tr>
     </thead>
     <tbody id="tbody">
@@ -140,8 +133,8 @@
         <td class="td-mono">5510492534</td>
         <td class="td-avance">
           <div class="avance-wrap">
-            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
-            <span class="avance-pct">0%</span>
+            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:13%"></div></div>
+            <span class="avance-pct">13%</span>
           </div>
         </td>
       </tr>
@@ -153,8 +146,8 @@
         <td class="td-mono">5510492534</td>
         <td class="td-avance">
           <div class="avance-wrap">
-            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
-            <span class="avance-pct">0%</span>
+            <div class="avance-bar"><div class="avance-fill bar-amber" style="width:67%"></div></div>
+            <span class="avance-pct">67%</span>
           </div>
         </td>
       </tr>
@@ -634,8 +627,8 @@
         <td class="td-mono">5537261662</td>
         <td class="td-avance">
           <div class="avance-wrap">
-            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
-            <span class="avance-pct">0%</span>
+            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:33%"></div></div>
+            <span class="avance-pct">33%</span>
           </div>
         </td>
       </tr>
@@ -647,8 +640,8 @@
         <td class="td-mono">5537261662</td>
         <td class="td-avance">
           <div class="avance-wrap">
-            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
-            <span class="avance-pct">0%</span>
+            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:33%"></div></div>
+            <span class="avance-pct">33%</span>
           </div>
         </td>
       </tr>
@@ -660,8 +653,8 @@
         <td class="td-mono">5537261662</td>
         <td class="td-avance">
           <div class="avance-wrap">
-            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
-            <span class="avance-pct">0%</span>
+            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:40%"></div></div>
+            <span class="avance-pct">40%</span>
           </div>
         </td>
       </tr>
@@ -959,8 +952,8 @@
         <td class="td-mono">5537261662</td>
         <td class="td-avance">
           <div class="avance-wrap">
-            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:1%"></div></div>
-            <span class="avance-pct">1%</span>
+            <div class="avance-bar"><div class="avance-fill bar-green" style="width:100%"></div></div>
+            <span class="avance-pct">100%</span>
           </div>
         </td>
       </tr>
@@ -1206,8 +1199,8 @@
         <td class="td-mono">5537261662</td>
         <td class="td-avance">
           <div class="avance-wrap">
-            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:0%"></div></div>
-            <span class="avance-pct">0%</span>
+            <div class="avance-bar"><div class="avance-fill bar-blue" style="width:17%"></div></div>
+            <span class="avance-pct">17%</span>
           </div>
         </td>
       </tr>
@@ -1227,32 +1220,25 @@
     </tbody>
   </table>
 </div>
-
 <div class="page-footer">Génesis Design System v1.0 · Genomma Lab Internacional · 2026</div>
-
 <script>
 function filter() {
   const q  = document.getElementById('search').value.toLowerCase();
   const eq = document.getElementById('fEquipo').value;
   const pr = document.getElementById('fPrio').value;
   const re = document.getElementById('fResp').value;
-  const rows = document.querySelectorAll('#tbody tr');
-  let visible = 0;
-  rows.forEach(tr => {
+  document.querySelectorAll('#tbody tr').forEach(tr => {
     const cells  = tr.querySelectorAll('td');
     const nombre = cells[2]?.textContent.toLowerCase() || '';
     const resp   = cells[3]?.textContent.trim() || '';
     const equipo = cells[0]?.textContent.trim();
     const prio   = cells[1]?.textContent.trim();
-    const match  =
-      (!q  || nombre.includes(q) || resp.toLowerCase().includes(q)) &&
-      (!eq || equipo === eq) &&
-      (!pr || prio === pr) &&
-      (!re || resp === re);
+    const match  = (!q||nombre.includes(q)||resp.toLowerCase().includes(q)) &&
+                   (!eq||equipo===eq) && (!pr||prio===pr) && (!re||resp===re);
     tr.classList.toggle('hidden', !match);
-    if (match) visible++;
   });
-  document.getElementById('counter').textContent = visible + ' servicios';
+  const vis = document.querySelectorAll('#tbody tr:not(.hidden)').length;
+  document.getElementById('counter').textContent = vis + ' servicios';
 }
 </script>
 </body>
