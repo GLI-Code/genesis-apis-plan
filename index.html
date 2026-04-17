@@ -56,17 +56,30 @@
   .progress-global .bar-track{flex:1;height:10px;background:#E2E8F0;border-radius:99px;overflow:hidden}
   .progress-global .bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#4F46E5,#10B981);transition:width .4s}
   .progress-global .pct{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#0B0F1A;white-space:nowrap;min-width:52px;text-align:right}
+  .contratadas-pill{display:flex;align-items:center;gap:8px;background:white;border:1px solid #e2e8f0;border-radius:12px;padding:14px 20px;margin-bottom:20px}
+  .contratadas-pill .cp-label{font-size:12px;font-weight:600;color:#8B95A5;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+  .contratadas-pill .cp-val{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#10B981;white-space:nowrap}
+  .contratadas-pill .cp-total{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;color:#8B95A5}
+  .contratadas-pill .cp-bar-wrap{flex:1;height:10px;background:#E2E8F0;border-radius:99px;overflow:hidden}
+  .contratadas-pill .cp-bar{height:100%;border-radius:99px;background:#10B981}
   .page-footer{text-align:center;margin-top:20px;font-size:11px;color:#8B95A5;font-family:'JetBrains Mono',monospace}
 </style></head><body>
 <div class="page-header">
   <div class="g-badge">G</div>
   <div><h1>Proyecto Génesis — Servicios por Equipo</h1>
-  <p>Genomma Lab Internacional · Deadline: 20 Abril 2026 · Actualizado: 16/04/2026 18:46</p></div>
+  <p>Genomma Lab Internacional · Deadline: 20 Abril 2026 · Actualizado: 16/04/2026 18:49</p></div>
 </div>
-<div class="progress-global">
-  <span class="label">Avance general</span>
-  <div class="bar-track"><div class="bar-fill" style="width:56%"></div></div>
-  <span class="pct">56%</span>
+<div style="display:flex;gap:12px;margin-bottom:20px">
+  <div class="progress-global" style="flex:1;margin-bottom:0">
+    <span class="label">Avance general</span>
+    <div class="bar-track"><div class="bar-fill" style="width:56%"></div></div>
+    <span class="pct">56%</span>
+  </div>
+  <div class="contratadas-pill" style="margin-bottom:0">
+    <span class="cp-label">Contratadas</span>
+    <div class="cp-bar-wrap"><div class="cp-bar" style="width:37%"></div></div>
+    <span class="cp-val">51</span><span class="cp-total">/137</span>
+  </div>
 </div>
 <div class="toolbar">
   <div class="search-box"><span>🔍</span><input type="text" id="search" placeholder="Buscar servicio o responsable…" oninput="filter()"></div>
